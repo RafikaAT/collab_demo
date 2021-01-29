@@ -8,7 +8,32 @@
 </head>
 <body>
     <h1>Welcome to our humble virtual abode</h1>
-    <p>This is the first bit of our page.</p>
-    <p>We will hopefully remember to play around with this page in our own time</p>
+    <p id="demo">This is the first bit of our page.</p>
+    <!-- JS needs access to the DOM in order to be able to manipulate the data. Any HTML that needs to be manipulates therefore, would be sensible to give it a unique ID - unless you are trying to be more general -->
+    <br>
+    <hr>
+    <button type = "button" onclick="myFunction()"> Click Me!</button>
+    <h2>Second header</h2>
+    <p>A random paragraph</p>
+    <!-- event handler is the code that will run in response to the the action -a click here- happening. That is why we have the onclick attribute -->
+    <p id="p2">We will hopefully remember to play around with this page in our own time</p>
+    <button type = "button" onclick="say_hello()"> Say Hello</button>
+    <!-- the buttons are an event handler. We can also put a whole bit of commands - .eg. document etc. directly there. but it could be more organised not to. -->
+<script>
+    function myFunction(){
+        console.log("Home Time")
+        document.getElementById("demo").innerHTML = "Hello from JavaScript";
+    }
+    // JS is all about events and events happening *//
+    // Functions are a block of code that we put together that is given a name and is called to do what it is written for. sometimes functions do not have names - just like a person sitting next to you, they can be alerted by a nudge. Lambda functions will be an e.g.
+
+    function say_hello(){
+        console.log("Start of the say hello function");
+        document.getElementById("p2").innerHTML = "Hello!";
+        console.log("End of the say hello function");
+    }
+    // how to grab hold of html element in the browser - use document = allows access to the DOM.
+</script>
+
 </body>
 </html>
